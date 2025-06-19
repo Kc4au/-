@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Песняры</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #277aaa; 
+      color: white;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;  
+      text-shadow: 2px 2px 4px #0008;
+    }
+
+    img.logo {
+      max-width: 80px;
+      border-radius: 50%;
+      background: white;
+      padding: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 6px 18px rgba(255, 255, 255, 0.6);
+    }
+
+    img.team {
+      max-width: 900px;
+      width: 90vw;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      margin: 0 auto 40px;
+    }
+
+    .lyrics {
+      font-style: italic;
+      font-size: 1.5rem;
+      max-width: 700px;
+      margin: 0 auto 50px;
+      padding: 20px;
+      background: #f5f5f5; 
+      color: #333; 
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+      user-select: none;
+    }
+
+    button#officialSiteBtn {
+      font-size: 1.3rem;
+      padding: 15px 40px;
+      border-radius: 30px;
+      border: none;
+      background: #353d47; 
+      color: white;
+      cursor: not-allowed;
+      opacity: 0.5;
+      user-select: none;
+      transition: opacity 0.3s ease, cursor 0.3s ease, background 0.3s ease;
+    }
+
+    button#officialSiteBtn.enabled {
+      cursor: pointer;
+      opacity: 1;
+      user-select: auto;
+    }
+
+    button#officialSiteBtn.enabled:hover {
+      background: #303f9f; 
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Логотип Песняры" class="logo" />
+    <h1>ПЕСНЯРЫ</h1>
+  </header>
+
+  <img src="team.jpg" alt="Фото группы Песняры" class="team" />
+
+  <section class="lyrics">
+    <p>
+      Кто тебе сказал, кто тебе сказал,<br />
+      Кто придумал, что тебя я не люблю?<br />
+      Я каждый час, я каждый час<br />
+      Тоскую по тебе, тоскую по тебе...
+    </p>
+  </section>
+
+  <button id="officialSiteBtn" title="Перейти на официальный сайт">
+    Официальный сайт группы Песняры
+  </button>
+
+  <script>
+    const btn = document.getElementById('officialSiteBtn');
+    btn.classList.add('enabled');
+    btn.addEventListener('click', () => {
+      window.open('https://pesnyary.by', '_blank', 'noopener');
+    });
+  </script>
+
+</body>
+</html>
